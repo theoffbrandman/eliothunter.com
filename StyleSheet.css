@@ -1,0 +1,341 @@
+﻿* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: inherit;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #001824;
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}
+
+.wrapper p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #c8cdd2;
+}
+
+.wrapper h1 {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    /*text-indent: 30px;*/
+    flex: 1;
+    /* same as flex-grow: 1; */
+    font-family: 'Times New Roman', Times, serif;
+    color: #c8cdd2;
+}
+
+.wrapper h2 {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #c8cdd2;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    /* for IE 6 */
+    color: #001824;
+    padding-bottom: 30px;
+}
+
+.image h1 {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.image p {
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.fixed-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 15px 20px 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*Allows fixed header to strecth all the way to the right*/
+    width: contain;
+    position: fixed;
+    background: #1e1e1e;
+    color: #fff;
+
+}
+
+.fixed-header ul {
+    margin: 0px;
+}
+
+.fixed-header li {
+    direction: ltr;
+    display: inline-block;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px 25px 0px 25px;
+    display: inline-block;
+    left: 0;
+}
+
+nav a:hover {
+    color: #000000;
+    padding: 0px 25px 0px 25px;
+    display: inline-block;
+    background-color: #ddd;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    width: inherit;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+    width: inherit;
+    /*trying to make dropdown same width as top part*/
+}
+
+ul li ul li {
+    background: #000000;
+    display: block;
+    float: left;
+    clear: left;
+    width: inherit;
+}
+
+ul li ul li a {
+    display: block !important;
+    width: inherit;
+}
+
+ul li ul li:hover {
+    background: #666;
+}
+
+.logo {
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: auto;
+    padding-top: 5.5px;
+    padding-left: 20px;
+    display: inline-block;
+    position: fixed;
+}
+
+/* Style the counter cards */
+.cardsmall {
+    text-align: center;
+    background-color: #efffff;
+    width: 350px
+}
+
+.cardlarge {
+    text-align: center;
+    background-color: #efffff;
+    width: 450px;
+}
+
+.cardwide {
+    text-align: center;
+    background-color: #efffff;
+    width: 95%;
+}
+
+.cardtiny {
+    text-align: center;
+    background-color: #efffff;
+    width: 200px;
+}
+
+.cardlarge p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardlarge h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardsmall p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardsmall h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardwide p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardwide h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardtiny p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardtiny h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+footer {
+    bottom: 0;
+    padding-top: 25px;
+    color: #bbb;
+    line-height: 1.5;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #eee;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 29.8125rem
+
+    /*477px*/
+) {
+    .ft-main {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 77.5rem
+
+    /*1240px*/
+) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
