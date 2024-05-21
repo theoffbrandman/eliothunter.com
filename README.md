@@ -1,2 +1,0 @@
-# eliothunter.com
-Personal website
