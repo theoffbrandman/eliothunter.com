@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 import Home from './index';
 import Contact from './Contact';
 import NotFound from './NotFound';
@@ -15,7 +16,7 @@ const App = () => {
         <Route path="/home" component={Home} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} /> {/* Catch-all route for 404 */}
-        </Switch>
+      </Switch>
       <Footer />
     </Router>
   );
