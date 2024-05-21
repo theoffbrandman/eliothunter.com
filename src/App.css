@@ -101,3 +101,16 @@ footer {
         footer a:hover {
             color: #007BFF;
         }
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .not-found .title {
+    margin-top: 0; /* Override the default margin-top for the title */
+  }
+  

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
-import logo from './eliothunter.com/logo.png"';
+import logo from '../eliothunter.com/logo.png"';
 
 const Header = () => {
   return (
