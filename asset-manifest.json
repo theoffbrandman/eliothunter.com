@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.783b5207.chunk.css",
-    "main.js": "/static/js/main.04b24019.chunk.js",
-    "main.js.map": "/static/js/main.04b24019.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c83d9f15.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c83d9f15.js.map",
-    "index.html": "/index.html",
-    "static/css/main.783b5207.chunk.css.map": "/static/css/main.783b5207.chunk.css.map",
-    "static/js/main.04b24019.chunk.js.LICENSE.txt": "/static/js/main.04b24019.chunk.js.LICENSE.txt"
+    "main.css": "https://theoffbrandman.github.io/eliothunter.com/static/css/main.783b5207.chunk.css",
+    "main.js": "https://theoffbrandman.github.io/eliothunter.com/static/js/main.04b24019.chunk.js",
+    "main.js.map": "https://theoffbrandman.github.io/eliothunter.com/static/js/main.04b24019.chunk.js.map",
+    "runtime-main.js": "https://theoffbrandman.github.io/eliothunter.com/static/js/runtime-main.3f04eeff.js",
+    "runtime-main.js.map": "https://theoffbrandman.github.io/eliothunter.com/static/js/runtime-main.3f04eeff.js.map",
+    "index.html": "https://theoffbrandman.github.io/eliothunter.com/index.html",
+    "static/css/main.783b5207.chunk.css.map": "https://theoffbrandman.github.io/eliothunter.com/static/css/main.783b5207.chunk.css.map",
+    "static/js/main.04b24019.chunk.js.LICENSE.txt": "https://theoffbrandman.github.io/eliothunter.com/static/js/main.04b24019.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c83d9f15.js",
+    "static/js/runtime-main.3f04eeff.js",
     "static/css/main.783b5207.chunk.css",
     "static/js/main.04b24019.chunk.js"
   ]
