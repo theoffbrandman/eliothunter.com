@@ -21,35 +21,43 @@ html {
     align-items: center;
 }
 
-.fixed-header {
+.fixed-header, .fixed-footer {
     width: 100%;
-    position: fixed;
-    top: 0;
     background: #333;
     color: #fff;
     padding: 15px 0;
 }
 
-    .fixed-header .container {
+.fixed-header {
+    position: fixed;
+    top: 0;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+}
+
+    .fixed-header .container, .fixed-footer .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
     }
 
-nav ul {
+nav ul, .ft-legal ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav a {
+nav a, .ft-legal a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-    nav a:hover {
+    nav a:hover, .ft-legal a:hover {
         color: #007BFF;
     }
 
