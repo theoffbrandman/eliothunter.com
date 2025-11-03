@@ -1,7 +1,7 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "../App.css";
 
-const Contact = () => {
+export default function Contact() {
   return (
     <div>
       <div className="title">
@@ -17,5 +17,3 @@ const Contact = () => {
     </div>
   );
 }
-
-export default Contact;

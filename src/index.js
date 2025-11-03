@@ -1,18 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.css"; // or remove if you don’t want globals
 
-const Home = () => {
-  return (
-    <div>
-      <div className="title">
-        <h1>Hello World</h1>
-        <p>Hosted by Eliot himself!</p>
-      </div>
-      <div className="wrapper">
-        <p>This is now my simplified home text.</p>
-      </div>
-    </div>
-  );
-}
-
-export default Home;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
