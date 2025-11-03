@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://theoffbrandman.github.io/eliothunter.com/static/css/main.8435c370.css",
+    "main.js": "https://theoffbrandman.github.io/eliothunter.com/static/js/main.217ad9f4.js",
+    "index.html": "https://theoffbrandman.github.io/eliothunter.com/index.html",
+    "main.8435c370.css.map": "https://theoffbrandman.github.io/eliothunter.com/static/css/main.8435c370.css.map",
+    "main.217ad9f4.js.map": "https://theoffbrandman.github.io/eliothunter.com/static/js/main.217ad9f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8435c370.css",
+    "static/js/main.217ad9f4.js"
+  ]
+}
