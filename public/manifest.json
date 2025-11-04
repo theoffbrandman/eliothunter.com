@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Eliot Hunter",
+  "name": "Eliot Hunter — Research, Engineering & Projects",
+  "description": "The personal website and portfolio of Eliot Hunter — featuring research, projects, and contact information.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#f5f5f5",
   "background_color": "#ffffff"
 }

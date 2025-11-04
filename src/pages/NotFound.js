@@ -4,14 +4,17 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <div className="not-found">
-      <div className="title">
-        <h1>404</h1>
-        <p>Page Not Found</p>
-        <Link to="/" className="back-home-link">
-          Go to Home
+    <div className="page-root notfound-wrap">
+      <main className="notfound-main" role="main">
+        <h1 className="notfound-title">404</h1>
+        <p className="notfound-sub">Page Not Found</p>
+        <p className="notfound-desc">
+          The page you’re looking for doesn’t exist or has moved.
+        </p>
+        <Link to="/" className="btn-primary notfound-btn">
+          Return Home
         </Link>
-      </div>
+      </main>
     </div>
   );
 }
