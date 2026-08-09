@@ -8,6 +8,7 @@ import MartialArts from "./pages/MartialArts";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import VideoLibrary from "./pages/VideoLibrary";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/martial-arts" element={<MartialArts />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/videos/6f3a91c8d247b5e0" element={<VideoLibrary />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
