@@ -194,9 +194,9 @@ export default function Home() {
         <h1 className="intro-title">Hello!</h1>
 
         <p className="intro-text">
-          I’m Eliot — an engineer and researcher focused on energy systems,
+          I’m Eliot - an engineer and researcher focused on energy systems,
           thermal management, and the intersection of engineering and policy.
-          Explore my projects, CV, and interests in martial arts.
+          Explore my projects, CV, and other facets. :p
         </p>
       </section>
     </main>

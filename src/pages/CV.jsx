@@ -13,7 +13,8 @@ export default function CV() {
                         <div className="cv-bubbles">
                             {/* Link to Projects page. Later, you can deep-link to sections like /projects#microgrids */}
                             <Link className="cv-bubble" to="/projects">Microgrids</Link>
-                            <Link className="cv-bubble" to="/projects">Thermal Systems</Link>
+                            <Link className="cv-bubble" to="/thesis">Master's Thesis</Link>
+                            <Link className="cv-bubble" to="/projects#thermal">Thermal Systems</Link>
                             <Link className="cv-bubble" to="/projects">Data Viz / Dash</Link>
                             <Link className="cv-bubble" to="/projects">Excel/VBA Tooling</Link>
                             <Link className="cv-bubble" to="/projects">Automotive</Link>
@@ -98,11 +99,12 @@ export default function CV() {
                         <h2 className="cv-h2">Education</h2>
                         <div className="cv-item">
                             <div className="cv-item-head">
-                                <h3 className="cv-role">M.S. Mechanical Engineering (in progress)</h3>
-                                <span className="cv-dates">2025 – </span>
+                                <h3 className="cv-role">M.S. Mechanical Engineering</h3>
+                                <span className="cv-dates">2025 – 2026</span>
                             </div>
                             <div className="cv-org">The George Washington University</div>
                             <ul className="cv-points">
+                                <li>Thesis: <Link to="/thesis">Parametric Evaluation of Hybrid Single-Phase Cooling Strategies for High-Heat-Flux Electronics</Link>.</li>
                                 <li>Focus: Energy systems, thermal management (jet impingement + microchannels), microgrids.</li>
                             </ul>
                         </div>

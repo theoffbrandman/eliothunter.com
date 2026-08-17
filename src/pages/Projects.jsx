@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../App.css";
+import "../thesis.css";
 
 export default function Projects() {
     const { hash } = useLocation();
@@ -23,6 +24,7 @@ export default function Projects() {
                     <div className="cv-card">
                         <h2 className="cv-side-title">Projects</h2>
                         <nav className="proj-toc">
+                            <Link to="/thesis">Master's Thesis</Link>
                             <a href="#microgrids">Microgrids</a>
                             <a href="#thermal">Thermal Systems</a>
                             <a href="#dash">Data Viz / Dash</a>
@@ -73,15 +75,26 @@ export default function Projects() {
                         <h2 id="thermal-title" className="proj-title">Thermal Systems</h2>
                         <p className="proj-meta">Jet impingement • Microchannels</p>
 
-                        <div className="proj-gallery">
-                            <div className="ph-img" aria-hidden="true" />
-                            <div className="ph-img" aria-hidden="true" />
+                        <div className="thesis-project-feature">
+                            <img
+                                src="/thesis/assets/selected-results.webp"
+                                alt="Selected hybrid cooling configuration thermal and fluid fields"
+                            />
+                            <div className="thesis-project-feature-copy">
+                                <span className="feature-kicker">Featured · M.S. Thesis · 2026</span>
+                                <h3>Parametric Evaluation of Hybrid Single-Phase Cooling Strategies for High-Heat-Flux Electronics</h3>
+                                <p>
+                                    A 3D COMSOL conjugate heat-transfer study combining embedded microchannels and distributed
+                                    jet impingement for extreme stacked-chip heat loads. Includes a searchable interactive thesis
+                                    reader, turnable book view, figures/tables navigation, and a reproducibility archive.
+                                </p>
+                                <Link to="/thesis">Explore the thesis →</Link>
+                            </div>
                         </div>
 
                         <div className="proj-body">
                             <p>
-                                Hybrid cooling concepts for high-heat-flux electronics; modeling transient conduction/convection
-                                and comparing adaptive vs passive control strategies.
+                                The thesis is the primary work in this section. Additional thermal-system modeling projects will become available after further formatting.
                             </p>
                         </div>
 
