@@ -91,42 +91,233 @@ body,
     text-decoration: underline;
 }
 
-/* ========== Collage Hero Section (unchanged) ========== */
-.hero {
+/* ========== Animated Home Photo Wall ========== */
+
+.home-hero {
     position: relative;
-    flex: 1;
+    flex: 1 1 0;
+    min-height: 0;
     width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+    background: #d8dde2;
+}
+
+/*
+ * The viewport is only a window onto a much wider,
+ * fixed-size photographic wall.
+ *
+ * Narrow screens crop it.
+ * Wide screens reveal more repeated columns.
+ */
+.home-photo-viewport {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     overflow: hidden;
 }
 
-.collage {
+.home-photo-wall {
     position: absolute;
-    inset: 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 6px;
-    padding: 6px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: max-content;
+
+    display: flex;
+    gap: 8px;
+
+    transform: translateX(-50%);
+
+    will-change: transform;
 }
 
-.tile {
-    background: linear-gradient(135deg, #dfe3e8, #cfd6dd);
-    border-radius: 6px;
-    min-height: 150px;
+.home-photo-bank {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: stretch;
+
+    gap: 8px;
 }
+
+/*
+ * Individual column widths come from Home.jsx.
+ *
+ * flex: 0 0 ... is important:
+ * the browser is explicitly forbidden from shrinking them.
+ */
+.home-photo-column {
+    position: relative;
+
+    flex: 0 0 var(--column-width);
+    width: var(--column-width);
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+/*
+ * Each track contains TWO identical stacks.
+ *
+ * Moving exactly -50% therefore replaces stack #1
+ * with an identical stack #2.
+ *
+ * When the animation restarts at 0, the visible
+ * content is identical, creating an invisible seam.
+ */
+.home-photo-track {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    animation:
+        home-column-rise var(--column-duration) linear infinite;
+
+    animation-delay: var(--column-delay);
+
+    will-change: transform;
+}
+
+.home-photo-stack {
+    flex: none;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    /*
+     * This creates the same gap at the seam between
+     * stack #1 and stack #2 as between normal photos.
+     */
+    padding-bottom: 8px;
+}
+
+.home-photo {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    flex: none;
+
+    object-fit: cover;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/*
+ * These are only shown before you add actual photos.
+ */
+.home-photo--placeholder {
+    min-height: 90px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.24),
+            transparent 45%),
+        linear-gradient(135deg,
+            #9ca6af,
+            #d4d9de 52%,
+            #b7c0c8);
+}
+
+/* Continuous upward travel */
+@keyframes home-column-rise {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+
+/* ========== Header / Footer Photo Vignettes ========== */
+
+/*
+ * These are stationary overlays.
+ *
+ * The photographs move underneath them, creating
+ * the illusion that the columns emerge from behind
+ * the footer and disappear underneath the header.
+ */
+.home-vignette {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+
+    height: clamp(54px, 9vh, 96px);
+
+    pointer-events: none;
+}
+
+.home-vignette--top {
+    top: 0;
+
+    background: linear-gradient(to bottom,
+            rgba(233, 236, 239, 0.82) 0%,
+            rgba(233, 236, 239, 0.32) 42%,
+            rgba(233, 236, 239, 0) 100%);
+}
+
+.home-vignette--bottom {
+    bottom: 0;
+
+    background: linear-gradient(to top,
+            rgba(233, 236, 239, 0.82) 0%,
+            rgba(233, 236, 239, 0.32) 42%,
+            rgba(233, 236, 239, 0) 100%);
+}
+
+
+/* ========== Center Introduction Card ========== */
 
 .intro-card {
-    position: relative;
-    z-index: 1;
-    max-width: 720px;
-    margin: 60px auto;
-    background: var(--card);
+    position: absolute;
+
+    z-index: 4;
+
+    top: 50%;
+    left: 50%;
+
+    width: min(720px, calc(100% - 40px));
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 255, 255, 0.94);
+
     color: var(--text);
-    border: 1px solid #e5e7eb;
+
+    border:
+        1px solid rgba(229, 231, 235, 0.92);
+
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 18px 48px rgba(0, 0, 0, 0.18);
+
     padding: 28px 32px;
+
     text-align: left;
+
+    /*
+     * Very slight glass effect.
+     * The card remains overwhelmingly white.
+     */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .intro-title {
@@ -138,6 +329,39 @@ body,
     font-size: 16px;
     line-height: 1.6;
     color: var(--text);
+}
+
+
+/* ========== Small Screen Card Adjustment ========== */
+
+/*
+ * Importantly, ONLY the card adapts here.
+ *
+ * The photographic columns do NOT resize.
+ */
+@media (max-width: 640px) {
+    .intro-card {
+        width: min(520px, calc(100% - 28px));
+        padding: 22px 24px;
+    }
+
+    .intro-title {
+        font-size: 25px;
+    }
+
+    .intro-text {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+}
+
+
+/* ========== Accessibility ========== */
+
+@media (prefers-reduced-motion: reduce) {
+    .home-photo-track {
+        animation-play-state: paused;
+    }
 }
 
 /* ========== Footer (bottom, scrolls into view) ========== */
@@ -881,7 +1105,10 @@ html {
     background: #333;
 }
 
-.contact-success { text-align: center; }
+.contact-success {
+    text-align: center;
+}
+
 /* ========== Unlisted Video Library ========== */
 .video-library-wrap {
     width: 100%;
@@ -910,7 +1137,7 @@ html {
     line-height: 1.15;
 }
 
-.video-library-heading > p:last-child {
+.video-library-heading>p:last-child {
     color: var(--muted);
     line-height: 1.6;
 }
